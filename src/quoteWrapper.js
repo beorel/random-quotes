@@ -12,16 +12,16 @@ import Card from '@mui/material/Card';
 class QuoteWrapper extends React.Component {
     constructor(props) {
         super(props);
-        const quote1 = "Find out what you like doing best, and get someone to pay you for doing it. - Katharine Whitehorn"
-        const quote2 = "If opportunity doesn\'t knock, build a door. - Milton Berle"
-        const quote3 = "The future depends on what you do today. - Mahatma Gandhi"
-        const quote4 = "Opportunities don\'t happen, you create them. - Chris Grosser"
-        const quote5 = "The only way to do great work is to love what you do. If you haven\'t found it yet, keep looking. Don\'t settle. - Steve Jobs"
-        const quote6 = "Whatever you decide to do, make sure it makes you happy. - Paulo Coelho"
-        const quote7 = "If you\'re offered a seat on a rocket ship, don\'t ask what seat! Just get on. - Sheryl Sandberg"
-        const quote8 = "A mind that is stretched by new experiences can never go back to its old dimensions. - Oliver Wendell Holmes, JR."
-        const quote9 = "When the grass looks greener on the other side of the fence, it may be that they take better care of it there. - Cecil Selig"
-        const quote10 = "Luck is what happens when preparation meets opportunity. - Seneca"
+        const quote1 = "Find out what you like doing best, and get someone to pay you for doing it. - By: Katharine Whitehorn"
+        const quote2 = "If opportunity doesn\'t knock, build a door. - By:  Milton Berle"
+        const quote3 = "The future depends on what you do today. - By:  Mahatma Gandhi"
+        const quote4 = "Opportunities don\'t happen, you create them. - By: Chris Grosser"
+        const quote5 = "The only way to do great work is to love what you do. If you haven\'t found it yet, keep looking. Don\'t settle. - By:  Steve Jobs"
+        const quote6 = "Whatever you decide to do, make sure it makes you happy. - By: Paulo Coelho"
+        const quote7 = "If you\'re offered a seat on a rocket ship, don\'t ask what seat! Just get on. - By: Sheryl Sandberg"
+        const quote8 = "A mind that is stretched by new experiences can never go back to its old dimensions. - By:  Oliver Wendell Holmes, JR."
+        const quote9 = "When the grass looks greener on the other side of the fence, it may be that they take better care of it there. - By:  Cecil Selig"
+        const quote10 = "Luck is what happens when preparation meets opportunity. - By:  Seneca"
 
         this.quoteArray = [];
         this.quoteArray.push(quote1, quote2, quote3, quote4, quote5, quote6, quote7, quote8, quote9, quote10)

@@ -5,7 +5,12 @@ const Quotes = (props) => {
     return (
         <div color={props.color} border={"50px solid blue"} >
             {props.quote}
-            {props.author}
+            <br></br>
+            <p style={{ textAlign: "right" }}>
+                <b >{props.author}</b>
+            </p>
+
+
         </div>
     )
 }
