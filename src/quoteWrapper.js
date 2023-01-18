@@ -2,16 +2,12 @@ import React from "react";
 import Quotes from "./quote";
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card';
-import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
 import { blue, green, yellow, cyan, purple, red, grey } from "@mui/material/colors";
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import Card from '@mui/material/Card';
 
 class QuoteWrapper extends React.Component {
     constructor(props) {
@@ -56,7 +52,6 @@ class QuoteWrapper extends React.Component {
         let randomColorDec = Math.random() * this.colorArray.length;
         let randomColorInt = Math.floor(randomColorDec);
         let printingColorFromIndex = this.colorArray[randomColorInt]
-        // console.log("printcolor", printingColorFromIndex)
         return (printingColorFromIndex)
     }
   
@@ -70,13 +65,10 @@ class QuoteWrapper extends React.Component {
             author: splittedAuthor,
             color: this.RandomColorIndex()
         })
-        console.log("maincolor", this.RandomColorIndex())
-        console.log("sec-color", this.state.color) 
     }
 
     componentDidMount = () => {
         this.UpdateQuote();
-        // this.UpdateColor();
     }
     
     ThemeColor = () => createTheme({
@@ -90,29 +82,30 @@ class QuoteWrapper extends React.Component {
     
     render() {
         return (
-            <div>
-                <CardContent sx={{ bgcolor: this.state.color }}>
+            // <div>
+            // <Card border={"50px solid blue"}>
+                <CardContent sx={{ backgroundColor: this.state.color, border:"1px solid red" }}>
+                
                     <Typography>
-                        <Box sx={{ flexGrow: 1 }} >
-                            <Grid container spacing={4} columnSpacing={{ xs: 6, sm: 2, md: 3 }} marginTop={"150px"}>
-                                <Grid xs={3} border={"1px solid red"} > first </Grid>
+                        {/* <Box sx={{ flexGrow: 1 }} > */}
+                        <Box>
+                            <Grid container spacing={4} columnSpacing={{ xs: 6, sm: 2, md: 3 }} marginTop={"180px"} marginBottom={"150px"}>
+                                <Grid xs={3}></Grid>
                                 <Grid xs={6} border={"1px solid red"} bgcolor={"white"}>
                                     <Quotes quote={this.state.quote}
                                         author={this.state.author}
                                         color={this.state.color} />
-                                    {/* <button id="new-quote" onClick={this.UpdateQuote}>New Quote</button> */}
-                                    {/* <button id="new-quote" onClick={()=>{ this.UpdateQuote(); this.UpdateColor() }}>New Quote</button> sx={{ bgcolor: this.RandomColorIndex() }}*/}
                                     <ThemeProvider theme={this.ThemeColor()}>
                                         <Button id="new-quote" onClick={this.UpdateQuote} variant="contained" color="neutral">New Quote</Button>
                                     </ThemeProvider>
-                                    {/* <button id="new-quote" onClick={this.UpdateColor}>New Color</button> */}
                                 </Grid>
-                                <Grid xs={3} border={"1px solid red"}> third</Grid>
+                                <Grid xs={3}></Grid>
                             </Grid>
                         </Box>
                     </Typography>
                 </CardContent>
-            </div>
+            // </Card>
+            // </div>
         )
     }
 }
